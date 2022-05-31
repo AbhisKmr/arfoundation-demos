@@ -25,11 +25,11 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubtractiveShadowColor: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 20b926d6af05243a0b57ce435bbfa514, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
-  m_FlareFadeSpeed: 3
+  m_FlareFadeSpeed: 1
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17271414, g: 0.2158194, b: 0.29772496, a: 1}
+  m_IndirectSpecularColor: {r: 0.9568989, g: 0.9568989, b: 0.9568989, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: d6486040cdd264a1c87266d419020c89,
+    type: 2}
   m_LightingSettings: {fileID: 2055387060}
 --- !u!196 &4
 NavMeshSettings:
@@ -581,10 +582,10 @@ RectTransform:
   m_Father: {fileID: 1931470343}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.28221196}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -989}
-  m_SizeDelta: {x: -33.999878, y: -1111.5894}
+  m_AnchoredPosition: {x: -0.2177124, y: -1659.9788}
+  m_SizeDelta: {x: -31.375244, y: 1141.4038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &953546284
 MonoBehaviour:
@@ -599,7 +600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.003921569, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -865,11 +866,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PlacedPrefab:
   - {fileID: 1459475779807352139, guid: 2e81a3aba5c5740acad35d42ed8488aa, type: 3}
-  - {fileID: 2287350499588939083, guid: e6870bd7a04f74b2b98c3378ce89b98d, type: 3}
-  - {fileID: 2949796595111409352, guid: 1591fcb32e8d54015989de868de05e16, type: 3}
+  - {fileID: 7138596301997714547, guid: 66b934a2775554c7e8ac3aa345afabd2, type: 3}
+  - {fileID: 8161560786464314055, guid: 0e3b6efa9dca9472fb723ee0584a2e36, type: 3}
+  - {fileID: 3026714458333167826, guid: 5dea158724f6e4a0eb4070530549715e, type: 3}
+  - {fileID: 8372747976090617963, guid: 8138b4213f5e649dbaddc1fa73cfd80f, type: 3}
+  - {fileID: 7983644260186005740, guid: 985ebbba59dc04f59980001fe92f4608, type: 3}
+  - {fileID: 7382889042294595272, guid: 6d5c3709088f64c109001ca6ad8dbbaf, type: 3}
+  - {fileID: 6832122618800874481, guid: 7de808d949c7745f5bba8f65ad86fdfa, type: 3}
   bottomBar: {fileID: 1752827213}
   placementLocator: {fileID: 420161577}
-  m_MaxNumberOfObjectsToPlace: 3
+  m_MaxNumberOfObjectsToPlace: 8
   m_CanReposition: 0
 --- !u!114 &1335839540
 MonoBehaviour:
@@ -905,6 +911,11 @@ MonoBehaviour:
   img:
   - {fileID: 21300000, guid: c96f1b23ac53e40148a4bad3094cb99e, type: 3}
   - {fileID: 21300000, guid: e9bbfdcb74470443e972f43f7e28893d, type: 3}
+  - {fileID: 21300000, guid: e4f9dfce8c7244a57b2faa583877dd15, type: 3}
+  - {fileID: 21300000, guid: e4f9dfce8c7244a57b2faa583877dd15, type: 3}
+  - {fileID: 21300000, guid: e4f9dfce8c7244a57b2faa583877dd15, type: 3}
+  - {fileID: 21300000, guid: e4f9dfce8c7244a57b2faa583877dd15, type: 3}
+  - {fileID: 21300000, guid: e4f9dfce8c7244a57b2faa583877dd15, type: 3}
   - {fileID: 21300000, guid: e4f9dfce8c7244a57b2faa583877dd15, type: 3}
 --- !u!1 &1401889615
 GameObject:
@@ -1229,7 +1240,7 @@ LightingSettings:
   serializedVersion: 4
   m_GIWorkflowMode: 0
   m_EnableBakedLightmaps: 1
-  m_EnableRealtimeLightmaps: 0
+  m_EnableRealtimeLightmaps: 1
   m_RealtimeEnvironmentLighting: 1
   m_BounceScale: 1
   m_AlbedoBoost: 1
