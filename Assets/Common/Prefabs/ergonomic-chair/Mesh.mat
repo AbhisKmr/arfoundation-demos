@@ -27,7 +27,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 8ac3c68831ebc6e4eb1e3a24f469f0d0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -80,7 +80,7 @@ Material:
     - _BlendMainNormal: 0
     - _BlendmodeOverlay: 0
     - _Brightness: 1
-    - _BumpScale: 1
+    - _BumpScale: -1.15
     - _ContrastDetailMap: 0
     - _Cull: 0
     - _Cutoff: 0.5
@@ -108,7 +108,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _Source: 0
     - _SpecularHighlights: 1
-    - _SpecularIntensity: 0.2
+    - _SpecularIntensity: 0.14
     - _SpreadDetailMap: 0
     - _SrcBlend: 1
     - _TriplanarFalloff: 20

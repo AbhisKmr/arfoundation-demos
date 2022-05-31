@@ -102,7 +102,7 @@ Material:
     - _EnableDetailMask: 0
     - _EnableTriplanarProjection: 1
     - _GlossMapScale: 1
-    - _Glossiness: 1
+    - _Glossiness: 0.882
     - _GlossyReflections: 1
     - _IntensityMask: 1
     - _IntensityTransparentMap: 0
@@ -110,7 +110,7 @@ Material:
     - _InvertABaseColor: 0
     - _InvertMask: 0
     - _InvertTransparent: 0
-    - _Metallic: 0.779
+    - _Metallic: 1
     - _Mode: 2
     - _OcclusionStrength: 1
     - _Parallax: 0.042
