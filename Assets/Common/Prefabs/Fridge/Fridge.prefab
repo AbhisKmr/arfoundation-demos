@@ -208,12 +208,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1981176674353629320, guid: bc716e7e583e8481abfc12de8805b019,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1857309847194865932, guid: bc716e7e583e8481abfc12de8805b019,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1063203228461421988, guid: bc716e7e583e8481abfc12de8805b019,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 163480801079080580, guid: bc716e7e583e8481abfc12de8805b019,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bc716e7e583e8481abfc12de8805b019,
         type: 3}
       propertyPath: m_Name
       value: sample
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bc716e7e583e8481abfc12de8805b019,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1585015375599971490, guid: bc716e7e583e8481abfc12de8805b019,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3380080921822813343, guid: bc716e7e583e8481abfc12de8805b019,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811171726696857748, guid: bc716e7e583e8481abfc12de8805b019,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148817236446094103, guid: bc716e7e583e8481abfc12de8805b019,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749646088101624262, guid: bc716e7e583e8481abfc12de8805b019,
         type: 3}
       propertyPath: m_IsActive
       value: 1

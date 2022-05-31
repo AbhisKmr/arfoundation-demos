@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
   m_Name: ReferenceImageLibrary
   m_EditorClassIdentifier: 
-  m_GuidLow: 5736471037392975798
-  m_GuidHigh: 11601481524868118675
+  m_GuidLow: 5424488171940219930
+  m_GuidHigh: 9148545862498111423
   m_DataStore:
     m_Storage: []
   m_Images:
