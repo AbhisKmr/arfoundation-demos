@@ -87,7 +87,6 @@ public class PlaceObjectsOnPlane : MonoBehaviour
     {
         bool isPlanDetected = m_RaycastManager.Raycast(new Vector2(Screen.width / 2, Screen.height / 2), s_Hits, TrackableType.PlaneWithinPolygon);
 
-        Debug.Log("is tapped:: "+isTappedOnObject);
         if (isPlanDetected)
         {
             bottomBar.SetActive(true);

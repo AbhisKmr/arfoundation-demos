@@ -8,13 +8,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mesh
-  m_Shader: {fileID: 4800000, guid: 63a90426d42b698448966291201d6716, type: 3}
+  m_Shader: {fileID: 4800000, guid: ed04895971c00fc498c346df2ac0e9b4, type: 3}
   m_ValidKeywords:
-  - _DETAILSOURCE_SPECULARALPHA
   - _SOURCE_SPECULARALPHA
-  - _TRIPLANARSPACEPROJECTION_OBJECTSPACE
   m_InvalidKeywords:
+  - _ALPHABLEND_ON
+  - _DETAILSOURCE_SPECULARALPHA
   - _ENABLETRIPLANARPROJECTION_ON
+  - _NORMALMAP
+  - _TRIPLANARSPACEPROJECTION_OBJECTSPACE
   - _USEAOFROMMAINPROPERTIES_ON
   - _USEEMISSIONFROMMAINPROPERTIES_ON
   m_LightmapFlags: 4
@@ -80,7 +82,7 @@ Material:
     - _BlendMainNormal: 0
     - _BlendmodeOverlay: 0
     - _Brightness: 1
-    - _BumpScale: -1.15
+    - _BumpScale: 1
     - _ContrastDetailMap: 0
     - _Cull: 0
     - _Cutoff: 0.5
@@ -90,7 +92,7 @@ Material:
     - _DetailSaturation: 0
     - _DetailSource: 0
     - _DetailSpecularIntensity: 0.2
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _EmissionIntensity: 1
     - _EnableDetailMask: 0
     - _EnableTriplanarProjection: 1
@@ -101,16 +103,17 @@ Material:
     - _InvertABaseColor: 0
     - _InvertMask: 0
     - _Metallic: 0
-    - _Mode: 0
+    - _Mode: 2
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Saturation: 0
     - _SmoothnessTextureChannel: 0
     - _Source: 0
+    - _SourceMask: 0
     - _SpecularHighlights: 1
     - _SpecularIntensity: 0.14
     - _SpreadDetailMap: 0
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _TriplanarFalloff: 20
     - _TriplanarSpaceProjection: 0
     - _UVSec: 0
@@ -118,7 +121,7 @@ Material:
     - _UseEmissionFromMainProperties: 1
     - _VisualizeMask: 0
     - _ZTest: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     - __dirty: 1
     m_Colors:
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}

@@ -389,7 +389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &420161578
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -465,13 +465,13 @@ Transform:
   m_PrefabInstance: {fileID: 3909263907368272039}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420161577}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.027, z: 0}
   m_LocalScale: {x: 0.032467972, y: 0.032467972, z: 0.032467972}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1182943023}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &427002218
 GameObject:
@@ -758,6 +758,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CameraManager: {fileID: 282840816}
   m_BrightnessMod: 2
+--- !u!1 &1182943022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1182943023}
+  m_Layer: 0
+  m_Name: PlacementLocator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1182943023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182943022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 420161581}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1335839533
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,7 +906,7 @@ MonoBehaviour:
   - {fileID: 7382889042294595272, guid: 6d5c3709088f64c109001ca6ad8dbbaf, type: 3}
   - {fileID: 6832122618800874481, guid: 7de808d949c7745f5bba8f65ad86fdfa, type: 3}
   bottomBar: {fileID: 1752827213}
-  placementLocator: {fileID: 420161577}
+  placementLocator: {fileID: 1182943022}
   m_MaxNumberOfObjectsToPlace: 8
   m_CanReposition: 0
 --- !u!114 &1335839540
@@ -890,7 +922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DisableFeaturePoints: 1
-  m_DisablePlaneRendering: 1
+  m_DisablePlaneRendering: 0
   m_PointCloudManager: {fileID: 1335839536}
   m_PlaneManager: {fileID: 1335839537}
 --- !u!114 &1335839541
@@ -1364,7 +1396,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1182943023}
     m_Modifications:
     - target: {fileID: 4350636003703662617, guid: e840f79ff796245babfc4ca440e1cbcf,
         type: 3}
@@ -1374,7 +1406,7 @@ PrefabInstance:
     - target: {fileID: 4350636003703662617, guid: e840f79ff796245babfc4ca440e1cbcf,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7955090028944942168, guid: e840f79ff796245babfc4ca440e1cbcf,
         type: 3}
@@ -1404,7 +1436,7 @@ PrefabInstance:
     - target: {fileID: 7955090028944942168, guid: e840f79ff796245babfc4ca440e1cbcf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.027
       objectReference: {fileID: 0}
     - target: {fileID: 7955090028944942168, guid: e840f79ff796245babfc4ca440e1cbcf,
         type: 3}
@@ -1499,6 +1531,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScreenspaceUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5977163238016480453, guid: 29251f2f7c5044cce8e7eb862b4d93ef,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5977163238016480456, guid: 29251f2f7c5044cce8e7eb862b4d93ef,
         type: 3}
