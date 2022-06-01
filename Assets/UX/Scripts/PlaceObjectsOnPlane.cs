@@ -51,6 +51,14 @@ public class PlaceObjectsOnPlane : MonoBehaviour
         set => m_CanReposition = value;
     }
 
+    private bool isTappedOnObject = false;
+
+    public bool TappedOnObject
+    {
+        get => isTappedOnObject;
+        set => isTappedOnObject = value;
+    }
+
     bool isBottomSheetActive = false;
 
     public bool BottomSheetActive
@@ -79,6 +87,7 @@ public class PlaceObjectsOnPlane : MonoBehaviour
     {
         bool isPlanDetected = m_RaycastManager.Raycast(new Vector2(Screen.width / 2, Screen.height / 2), s_Hits, TrackableType.PlaneWithinPolygon);
 
+        Debug.Log("is tapped:: "+isTappedOnObject);
         if (isPlanDetected)
         {
             bottomBar.SetActive(true);
@@ -89,8 +98,11 @@ public class PlaceObjectsOnPlane : MonoBehaviour
                 placementLocator.transform.SetPositionAndRotation(hitPose.position, hitPose.rotation);
                 placementLocator.SetActive(true);
 
-                if (!isBottomSheetActive)
-                    TouchOnLocator(hitPose);
+                if (!isTappedOnObject)
+                {
+                    if (!isBottomSheetActive)
+                        TouchOnLocator(hitPose);
+                }
             }
         }
     }
@@ -108,7 +120,7 @@ public class PlaceObjectsOnPlane : MonoBehaviour
                     if (m_NumberOfPlacedObjects < m_MaxNumberOfObjectsToPlace)
                     {
                         spawnedObject = Instantiate(m_PlacedPrefab[placementIndex], hitPose.position, hitPose.rotation);
-
+                        spawnedObject.name = m_PlacedPrefab[placementIndex].name;
                         m_NumberOfPlacedObjects++;
                     }
 

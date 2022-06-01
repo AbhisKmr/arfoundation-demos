@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Meshing/Scenes/Meshing.unity
     guid: d5ebb81bb19834855bb7ca490ab73fbf
+  - enabled: 0
+    path: Assets/UX/Scenes/Test.unity
+    guid: 910900718d79c409480e8deb44da263c
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: ad4d7f226aa3a534b8fb28f89c84e258,
       type: 2}
