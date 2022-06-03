@@ -905,9 +905,10 @@ MonoBehaviour:
   - {fileID: 7983644260186005740, guid: 985ebbba59dc04f59980001fe92f4608, type: 3}
   - {fileID: 7382889042294595272, guid: 6d5c3709088f64c109001ca6ad8dbbaf, type: 3}
   - {fileID: 6832122618800874481, guid: 7de808d949c7745f5bba8f65ad86fdfa, type: 3}
+  - {fileID: 4429184599084090, guid: f0042e7a2ef7a4da79b7d00566d56153, type: 3}
   bottomBar: {fileID: 1752827213}
   placementLocator: {fileID: 1182943022}
-  m_MaxNumberOfObjectsToPlace: 8
+  m_MaxNumberOfObjectsToPlace: 100
   m_CanReposition: 0
 --- !u!114 &1335839540
 MonoBehaviour:
@@ -943,6 +944,7 @@ MonoBehaviour:
   img:
   - {fileID: 21300000, guid: c96f1b23ac53e40148a4bad3094cb99e, type: 3}
   - {fileID: 21300000, guid: e9bbfdcb74470443e972f43f7e28893d, type: 3}
+  - {fileID: 21300000, guid: e4f9dfce8c7244a57b2faa583877dd15, type: 3}
   - {fileID: 21300000, guid: e4f9dfce8c7244a57b2faa583877dd15, type: 3}
   - {fileID: 21300000, guid: e4f9dfce8c7244a57b2faa583877dd15, type: 3}
   - {fileID: 21300000, guid: e4f9dfce8c7244a57b2faa583877dd15, type: 3}
