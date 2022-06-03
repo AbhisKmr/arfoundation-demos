@@ -8,28 +8,32 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: xyj
-  m_Shader: {fileID: 4800000, guid: 63a90426d42b698448966291201d6716, type: 3}
+  m_Shader: {fileID: 4800000, guid: ee7e4c9a5f6364b688a332c67fc32cca, type: 3}
   m_ValidKeywords:
-  - _DETAILSOURCE_SPECULARALPHA
-  - _SOURCE_SPECULARALPHA
-  - _TRIPLANARSPACEPROJECTION_OBJECTSPACE
-  m_InvalidKeywords:
-  - _ENABLETRIPLANARPROJECTION_ON
-  - _METALLICGLOSSMAP
+  - _METALLICSPECGLOSSMAP
   - _NORMALMAP
-  - _USEAOFROMMAINPROPERTIES_ON
-  - _USEEMISSIONFROMMAINPROPERTIES_ON
+  - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 5c5d33ae490e34755819c8e999d81a96, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: 42e57eb08d07546a0aaabcd7f809605c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ClearCoatMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -76,16 +80,35 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaClip: 0
     - _AoIntensity: 1.11
+    - _Blend: 0
     - _BlendMainNormal: 0
+    - _BlendOp: 0
     - _BlendmodeOverlay: 0
     - _Brightness: 1
     - _BumpScale: 1
+    - _ClearCoat: 0
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
     - _ContrastDetailMap: 0
     - _Cull: 0
     - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
     - _DetailBrightness: 2.93
     - _DetailGlossiness: 0.38
     - _DetailNormalMapScale: 1
@@ -96,39 +119,56 @@ Material:
     - _EmissionIntensity: 0.6
     - _EnableDetailMask: 0
     - _EnableTriplanarProjection: 1
+    - _EnvironmentReflections: 1
     - _GlossMapScale: 0.774
     - _Glossiness: 0.58
     - _GlossyReflections: 1
     - _IntensityMask: 1
     - _InvertABaseColor: 0
     - _InvertMask: 0
-    - _Metallic: 0
+    - _Metallic: 1
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
     - _Saturation: 0
-    - _SmoothnessTextureChannel: 0
+    - _Smoothness: 0.792
+    - _SmoothnessTextureChannel: 1
     - _Source: 0
     - _SourceMask: 0
     - _SpecularHighlights: 1
     - _SpecularIntensity: 0
     - _SpreadDetailMap: 0
     - _SrcBlend: 1
+    - _Surface: 0
     - _TriplanarFalloff: 20
     - _TriplanarSpaceProjection: 0
     - _UVSec: 0
     - _UseAoFromMainProperties: 1
+    - _UseAoMap: 0
+    - _UseColorMap: 0
     - _UseEmissionFromMainProperties: 1
+    - _UseEmissiveMap: 0
+    - _UseMetallicMap: 0
+    - _UseNormalMap: 0
+    - _UseRoughnessMap: 0
     - _VisualizeMask: 0
+    - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 1
     - __dirty: 1
     m_Colors:
-    - _Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 0}
     - _DetailSpecularColor: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlobalXYTilingXYZWOffsetXY: {r: 1, g: 1, b: 0, a: 0}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 0}
     - _TriplanarXYTilingXYZWOffsetXY: {r: 1, g: 1, b: 0, a: 0}
+    - _UvOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _UvTiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
