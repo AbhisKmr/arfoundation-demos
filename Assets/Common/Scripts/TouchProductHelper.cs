@@ -8,8 +8,7 @@ public class TouchProductHelper : MonoBehaviour
     Vector3 initialScale = Vector3.zero;
     float initialDistance = 0f;
     private AnimatorHandler animatorHandler;
-    bool lMove = false;
-
+    private bool lMove = false;
 
     private void Start()
     {
@@ -20,14 +19,18 @@ public class TouchProductHelper : MonoBehaviour
             animatorHandler = t.gameObject.GetComponent<AnimatorHandler>();
             if (animatorHandler != null) break;
         }
+
+        Debug.Log("anim available:: "+animatorHandler != null);
+        placeObjectsOnPlane.GetSpawnedObjectTool.transform.GetChild(0)
+            .gameObject.SetActive(animatorHandler != null ? true : false);
     }
 
     void Update()
     {
         if (Input.touchCount > 0)
         {
-            placeObjectsOnPlane.TappedOnObject = true;
             Touch touch = Input.GetTouch(0);
+            placeObjectsOnPlane.TappedOnObject = true;
 
             switch (touch.phase)
             {
@@ -43,16 +46,14 @@ public class TouchProductHelper : MonoBehaviour
 
                 case TouchPhase.Ended:
                     Debug.Log("Touch ended");
-                    if (!lMove)
-                    {
-                        onTouchObject();
-                    }
+                    if (!lMove) onTouchObject();
                     break;
             }
             lMove = false;
         }
         else
             placeObjectsOnPlane.TappedOnObject = false;
+
     }
 
     private void onTouchObject()
@@ -71,7 +72,6 @@ public class TouchProductHelper : MonoBehaviour
                     {
                         animatorHandler.clickedOnObject = true;
                     }
-                    
                 }
             }
         }
@@ -87,6 +87,7 @@ public class TouchProductHelper : MonoBehaviour
         {
             if (hit.collider.name == transform.name)
             {
+                placeObjectsOnPlane.spawnedObject = transform.gameObject;
                 if (Input.touchCount == 1) // to rotate
                 {
                     Touch screenTouch = Input.GetTouch(0);
@@ -96,7 +97,7 @@ public class TouchProductHelper : MonoBehaviour
                     }
                 }
 
-                else if (false) // to scale (Input.touchCount == 2)
+                else if (Input.touchCount == 2) // to scale (Input.touchCount == 2)
                 {
                     Touch zeroTouch = Input.GetTouch(0);
                     Touch oneTouch = Input.GetTouch(1);
@@ -120,16 +121,18 @@ public class TouchProductHelper : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("tap else");
-
                         float currentDistance = Vector2.Distance(zeroTouch.position, oneTouch.position);
 
                         if (Mathf.Approximately(initialDistance, 0)) return;
 
                         var factor = currentDistance / initialDistance;
-                        Debug.Log("next:: " + currentDistance + "::" + factor);
 
-                        transform.localScale = initialScale * factor;
+                        var calculatedScale = initialScale * factor;
+
+                        transform.localScale = calculatedScale;
+                        initialScale = transform.localScale;
+                        initialDistance = Vector2.Distance(zeroTouch.position, oneTouch.position);
+
                     }
                 } 
             }

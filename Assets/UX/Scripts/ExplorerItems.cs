@@ -1,7 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
+public class SheetDataObject
+{
+    public GameObject products;
+    public RawImage representativeImage;
+    public string name;
+}
 
 public class ExplorerItems : MonoBehaviour
 {
@@ -14,32 +22,38 @@ public class ExplorerItems : MonoBehaviour
     [SerializeField]
     private List<Sprite> img = new List<Sprite>();
 
-    private Vector3 initialSheetpos = Vector3.zero;
-    private Vector3 hideSheetPos = new Vector3(585.00f, -70.72f, 0.00f);
-    private float speed = 3f;
     private PlaceObjectsOnPlane placeObjectsOnPlane;
+    private List<SheetDataObject> sheetObjList = new List<SheetDataObject>();
+    private BottomSheetHelper SheetHelper;
+
+    private string[] nameList = new string[] { "Fridge", "Recliner", "Wodrobe", "Sofa" };
+
+    public List<SheetDataObject>  GetSheetList
+    {
+        get { return sheetObjList; }
+        set { sheetObjList = value; }
+    }
 
 
     void Start()
     {
-        bottomSheet.SetActive(false);
         placeObjectsOnPlane = transform.GetComponent<PlaceObjectsOnPlane>();
+        SheetHelper = FindObjectOfType<BottomSheetHelper>();
+
         List<GameObject> itemToShow = placeObjectsOnPlane.placedPrefab;
 
         for (int i = 0; i < itemToShow.Count; i++)
         {
             var t = Instantiate(template, bottomSheet.transform.transform);
             t.name = i.ToString();
-            t.transform.GetChild(0).GetComponent<Image>().sprite = img[i];
+            t.transform.GetChild(0).GetComponent<RawImage>().texture = img[i].texture;
+            t.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = nameList[i];
 
             t.GetComponent<Button>().onClick.AddListener(delegate
             {
                 OnItemClicked(int.Parse(t.name));
             });
         }
-
-        //initialSheetpos = bottomSheet.transform.position;
-        //bottomSheet.transform.position = hideSheetPos;
     }
 
     public void explorerItems()
@@ -53,7 +67,7 @@ public class ExplorerItems : MonoBehaviour
     {
         placeObjectsOnPlane.readyForPlaceItem = true;
         placeObjectsOnPlane.PlacementIntex = s;
-        bottomSheet.SetActive(false);
+        SheetHelper.BottonSheetPosition();
         Debug.Log(s);
     }
 
@@ -61,6 +75,6 @@ public class ExplorerItems : MonoBehaviour
     {
         //bottomSheet.transform.position = b ? hideSheetPos: initialSheetpos;
         placeObjectsOnPlane.BottomSheetActive = b;
-        bottomSheet.SetActive(!b);
+        //bottomSheet.SetActive(!b);
     }
 }

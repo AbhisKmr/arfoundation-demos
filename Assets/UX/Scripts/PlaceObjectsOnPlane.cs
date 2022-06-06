@@ -29,7 +29,10 @@ public class PlaceObjectsOnPlane : MonoBehaviour
         set { m_PlacedPrefab = value; }
     }
 
-    public GameObject spawnedObject { get; private set; }
+    public GameObject spawnedObject;
+
+    public GameObject SetSpawnedObject
+    { get; private set; }
 
     public static event Action onPlacedObject;
 
@@ -77,10 +80,19 @@ public class PlaceObjectsOnPlane : MonoBehaviour
         set => isReadyForPlaceItem = value;
     }
 
+    private GameObject spawnedObjectTool;
+
+    public GameObject GetSpawnedObjectTool
+    {
+        get => spawnedObjectTool;
+        set => spawnedObjectTool = value;
+    }
+
     void Awake()
     {
         m_RaycastManager = GetComponent<ARRaycastManager>();
         placementLocator.SetActive(false);
+        spawnedObjectTool = GameObject.Find("ProductTool");
     }
 
     void Update()
@@ -100,7 +112,9 @@ public class PlaceObjectsOnPlane : MonoBehaviour
                 if (!isTappedOnObject)
                 {
                     if (!isBottomSheetActive)
+                    {
                         TouchOnLocator(hitPose);
+                    }
                 }
             }
         }
@@ -139,6 +153,15 @@ public class PlaceObjectsOnPlane : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    public void DeletePlacedProdect()
+    {
+        if (spawnedObject != null)
+        {
+            Destroy(spawnedObject);
+            isTappedOnObject = false;
         }
     }
 
